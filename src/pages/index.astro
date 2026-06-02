@@ -1,7 +1,26 @@
 ---
+import Header from '../components/Header.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
-  <div>Hello</div>
+  <div class='page-wrapper'>
+    <Header />
+    <main>
+      <!-- <About />
+      <Skills />
+      <Projects projects={PROJECTS} /> -->
+    </main>
+    <!-- <Footer /> -->
+  </div>
 </BaseLayout>
+
+<style>
+  .page-wrapper {
+    position: relative;
+    width: 100vw;
+    max-width: 100rem;
+    margin-inline: auto;
+    font-family: sans-serif;
+  }
+</style>
