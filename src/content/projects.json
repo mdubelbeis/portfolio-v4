@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "demoLink": "https://clienthub-frontend-sigma.vercel.app/login",
+    "projectBgImg": "./assets/imgs/clienthub.png",
+    "projectName": "ClientHub",
+    "projectText": "Deployed full-stack CRM built with React, TypeScript, Spring Boot, JWT authentication, PostgreSQL, and role-based data access. Features client management, activity tracking, validation, and secure REST APIs.",
+    "projectTech": [
+      "React",
+      "TypeScript",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "PostgreSQL",
+      "Docker",
+      "OpenAPI/Swagger"
+    ],
+    "githubLinkBE": "https://github.com/mdubelbeis/clienthub-api",
+    "githubLinkFE": "https://github.com/mdubelbeis/clienthub-frontend"
+  },
+  {
+    "id": 2,
+    "demoLink": null,
+    "projectBgImg": "./assets/imgs/projects-bg.jpg",
+    "projectName": "Order Management API",
+    "projectText": "Backend API for managing customers, orders, order items, and product inventory with clean service-layer architecture.",
+    "projectTech": [
+      "Java 21",
+      "Spring Boot",
+      "Spring Web",
+      "Spring Data JPA",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "githubLinkBE": "https://github.com/mdubelbeis/order-management-api",
+    "githubLinkFE": null
+  },
+  {
+    "id": 3,
+    "demoLink": null,
+    "projectBgImg": "./assets/imgs/vacations-api.jpg",
+    "projectName": "Vacations API",
+    "projectText": "Spring Boot backend for a travel booking system with transactional checkout workflows and relational domain modeling.",
+    "projectTech": [
+      "Java 17",
+      "Spring Boot",
+      "Spring Web",
+      "Spring Data JPA",
+      "Hibernate",
+      "Maven",
+      "MySQL",
+      "RESTful API Design"
+    ],
+    "githubLinkBE": "https://github.com/mdubelbeis/Vacations-Booking-Backend-API",
+    "githubLinkFE": null
+  }
+]
