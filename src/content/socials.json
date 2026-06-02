@@ -3,18 +3,18 @@
     "id": 1,
     "label": "GitHub",
     "url": "https://www.github.com/mdubelbeis",
-    "icon": "GH"
+    "icon": "/src/assets/icons/github.png"
   },
   {
     "id": 2,
     "label": "LinkedIn",
     "url": "https://www.linkedin.com/in/mason-dub/",
-    "icon": "IN"
+    "icon": "/src/assets/icons/in.png"
   },
   {
     "id": 3,
     "label": "Email",
     "url": "mailto:mason.dubelbeis@gmail.com",
-    "icon": "@"
+    "icon": "/src/assets/icons/email.png"
   }
 ]
