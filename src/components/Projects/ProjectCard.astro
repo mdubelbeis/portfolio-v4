@@ -1,0 +1,341 @@
+---
+import ProjectMedia from './ProjectMedia.astro';
+
+const { project } = Astro.props;
+
+const projectTech = project.projectTech ?? [];
+const githubLinks = project.githubLink ?? [];
+
+const primaryGithubLink = githubLinks[0];
+const secondaryGithubLink = githubLinks[1];
+
+const hasMultipleGithubLinks = githubLinks.length > 1;
+---
+
+<article class='project-card'>
+  <div class='project-media-wrapper'>
+    <ProjectMedia projectName={project.projectName} />
+
+    <details class='tech-details'>
+      <summary
+        class='tech-toggle'
+        aria-label={`Show tech stack for ${project.projectName}`}
+      >
+        <span class='tech-icon tech-icon-open'>×</span>
+        <span class='tech-icon tech-icon-closed'>⚒</span>
+      </summary>
+
+      <div class='tech-overlay'>
+        <div>
+          <div class='tech-header'>
+            <span class='tech-header-icon'>⚒</span>
+            <h4>Tech Stack</h4>
+          </div>
+
+          <ul class='tech-list'>
+            {
+              project.projectTech.map((tech: any) => (
+                <li class='tech-pill'>{tech}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class='project-content'>
+    <div>
+      <p class='project-kicker'>
+        {project.status || 'Featured Project'}
+      </p>
+
+      <h3 class='project-title'>{project.projectName}</h3>
+
+      <p class='project-description'>{project.projectText}</p>
+    </div>
+
+    <div class='project-actions'>
+      {
+        project.demoLink && (
+          <a
+            href={project.demoLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='card-link card-link-primary'
+          >
+            <span aria-hidden='true'>↗</span>
+            Live Demo
+          </a>
+        )
+      }
+
+      {
+        primaryGithubLink && (
+          <a
+            href={primaryGithubLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='card-link card-link-secondary'
+          >
+            <span aria-hidden='true'>GitHub</span>
+            {hasMultipleGithubLinks ? 'Backend' : 'Code'}
+          </a>
+        )
+      }
+
+      {
+        secondaryGithubLink && (
+          <a
+            href={secondaryGithubLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='card-link card-link-secondary'
+          >
+            <span aria-hidden='true'>GitHub</span>
+            Frontend
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>
+
+<style>
+  .project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    transition:
+      transform 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 20px 28px rgba(15, 23, 42, 0.14);
+  }
+
+  .project-media-wrapper {
+    position: relative;
+  }
+
+  .project-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  .project-kicker {
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .project-title {
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .project-description {
+    color: #475569;
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+
+  .project-actions,
+  .overlay-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      border-color 200ms ease,
+      background-color 200ms ease,
+      color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .card-link:hover {
+    transform: translateY(-1px);
+  }
+
+  .card-link-primary {
+    border: 1px solid #2563eb;
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  .card-link-primary:hover {
+    border-color: #1d4ed8;
+    background: #1d4ed8;
+  }
+
+  .card-link-secondary {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+  }
+
+  .card-link-secondary:hover {
+    border-color: #0f172a;
+    color: #0f172a;
+  }
+
+  .tech-details {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .tech-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.82);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.22);
+    cursor: pointer;
+    list-style: none;
+    backdrop-filter: blur(8px);
+    pointer-events: auto;
+    transition:
+      background-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .tech-toggle:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
+  .tech-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .tech-icon {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .tech-icon-open {
+    display: none;
+  }
+
+  .tech-details[open] .tech-icon-open {
+    display: inline;
+  }
+
+  .tech-details[open] .tech-icon-closed {
+    display: none;
+  }
+
+  .tech-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(3px);
+    pointer-events: auto;
+  }
+
+  .tech-details[open] .tech-overlay {
+    display: flex;
+  }
+
+  .tech-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-header-icon {
+    color: #2563eb;
+    font-size: 1.375rem;
+    line-height: 1;
+  }
+
+  .tech-header h4 {
+    color: #0f172a;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-pill {
+    border: 1px solid #dbeafe;
+    border-radius: 999px;
+    background: #eff6ff;
+    padding: 0.25rem 0.75rem;
+    color: #1d4ed8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    list-style-type: none;
+  }
+
+  .overlay-actions {
+    margin-top: 2rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .card-link,
+    .tech-toggle {
+      transition: none;
+    }
+
+    .project-card:hover,
+    .card-link:hover,
+    .tech-toggle:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "label": "GitHub",
+    "url": "https://www.github.com/mdubelbeis",
+    "icon": "GH"
+  },
+  {
+    "id": 2,
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/mason-dub/",
+    "icon": "IN"
+  },
+  {
+    "id": 3,
+    "label": "Email",
+    "url": "mailto:mason.dubelbeis@gmail.com",
+    "icon": "@"
+  }
+]

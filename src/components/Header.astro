@@ -1,23 +1,7 @@
 ---
-// Header.astro
+import { getCollection } from 'astro:content';
 
-const SOCIAL_LINKS = [
-  {
-    label: 'GitHub',
-    url: 'https://www.github.com/mdubelbeis',
-    icon: 'GH',
-  },
-  {
-    label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/mason-dub/',
-    icon: 'IN',
-  },
-  {
-    label: 'Email',
-    url: 'mailto:mason.dubelbeis@gmail.com',
-    icon: '@',
-  },
-];
+const socials = await getCollection('socials');
 ---
 
 <header class='site-header'>
@@ -34,20 +18,22 @@ const SOCIAL_LINKS = [
     <nav aria-label='Social links'>
       <ul class='social-list'>
         {
-          SOCIAL_LINKS.map((link) => (
+          socials.map((link) => (
             <li>
               <a
-                href={link.url}
-                target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+                href={link.data.url}
+                target={
+                  link.data.url.startsWith('mailto:') ? undefined : '_blank'
+                }
                 rel={
-                  link.url.startsWith('mailto:')
+                  link.data.url.startsWith('mailto:')
                     ? undefined
                     : 'noopener noreferrer'
                 }
-                aria-label={link.label}
+                aria-label={link.data.label}
                 class='social-link'
               >
-                {link.icon}
+                {link.data.icon}
               </a>
             </li>
           ))

@@ -1,0 +1,128 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from './ProjectCard.astro';
+
+const projectEntries = await getCollection('projects');
+
+const projects = projectEntries
+  .map((entry: any) => entry.data)
+  .sort((a: any, b: any) => a.id - b.id);
+---
+
+<section id='projects' class='projects-section'>
+  <div class='projects-blur projects-blur-primary'></div>
+  <div class='projects-blur projects-blur-secondary'></div>
+
+  <div class='projects-container'>
+    <div class='projects-header'>
+      <p class='projects-eyebrow'>Selected Work</p>
+
+      <h2 class='projects-title'>
+        Projects built with real-world backend and full-stack patterns
+      </h2>
+
+      <p class='projects-text'>
+        A collection of applications focused on clean API design, relational
+        data modeling, authentication, testing, deployment, and practical user
+        workflows.
+      </p>
+    </div>
+
+    <div class='projects-grid'>
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    color: #020617;
+    padding: 7rem 1.5rem;
+  }
+
+  .projects-blur {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(64px);
+    pointer-events: none;
+  }
+
+  .projects-blur-primary {
+    top: -7.5rem;
+    left: -7.5rem;
+    width: 20rem;
+    height: 20rem;
+    background: #dbeafe;
+  }
+
+  .projects-blur-secondary {
+    right: -7.5rem;
+    bottom: -8.75rem;
+    width: 24rem;
+    height: 24rem;
+    background: #f1f5f9;
+  }
+
+  .projects-container {
+    position: relative;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .projects-header {
+    max-width: 48rem;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .projects-eyebrow {
+    margin-bottom: 0.75rem;
+    color: #1d4ed8;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .projects-title {
+    color: #020617;
+    font-size: clamp(2.25rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .projects-text {
+    margin-top: 1.25rem;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects-section {
+      padding-inline: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

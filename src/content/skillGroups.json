@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Stack TypeScript",
+    "description": "React, TypeScript, Node.js, Express, API design, and full-stack application delivery.",
+    "categories": [
+      "Frontend",
+      "Backend"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Backend Development",
+    "description": "REST APIs, service-layer architecture, authentication, validation, and backend application design.",
+    "categories": [
+      "Backend"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Data & Persistence",
+    "description": "Relational database design, PostgreSQL, MongoDB, SQL, JPA, Hibernate, and data modeling.",
+    "categories": [
+      "Database"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "DevOps & Tooling",
+    "description": "Containers, Git workflows, deployment support, version control, CLI tools, and development tooling.",
+    "categories": [
+      "DevOps & Tools"
+    ]
+  }
+]
