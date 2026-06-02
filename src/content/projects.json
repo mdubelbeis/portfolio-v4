@@ -2,7 +2,6 @@
   {
     "id": 1,
     "demoLink": "",
-    "projectBgImg": "/Users/masondubelbeis/dev/dev-projects/web/_sandbox/portfolio-v4/src/assets/imgs/bug-board-wb.png",
     "projectName": "Bug-Board",
     "status": "In Development",
     "projectText": "Full-stack issue tracking application built with React, Node.js, Express, MongoDB, and TypeScript. Designed to practice production-style full-stack development with authentication, protected routes, project-based issue management, REST API design, validation, and database modeling.",
@@ -23,7 +22,6 @@
   {
     "id": 2,
     "demoLink": "https://clienthub-frontend-sigma.vercel.app/login",
-    "projectBgImg": "src/assets/imgs/clienthub.png",
     "projectName": "ClientHub",
     "status": "Deployed",
     "projectText": "Full-stack CRM application built with React, TypeScript, Spring Boot, JWT authentication, PostgreSQL, and role-based data access. Features client management, activity tracking, validation, secure REST APIs, API documentation, and production-style backend architecture.",
@@ -45,7 +43,6 @@
   {
     "id": 3,
     "demoLink": "",
-    "projectBgImg": "src/assets/imgs/dubex-wb.png",
     "projectName": "Dubex",
     "status": "In Development",
     "projectText": "Node.js and TypeScript CLI tool focused on developer productivity and code generation workflows. Built to practice command-line application design, file system operations, modular architecture, user prompts, and reusable utility patterns.",
@@ -63,7 +60,6 @@
   {
     "id": 4,
     "demoLink": "",
-    "projectBgImg": "src/assets/imgs/order-management-api.png",
     "projectName": "Order Management API",
     "status": "GitHub Repo",
     "projectText": "Spring Boot backend API for managing customers, orders, order items, and product inventory. Focused on RESTful API design, relational data modeling, service-layer architecture, PostgreSQL persistence, and Docker-based development.",
@@ -83,7 +79,6 @@
   {
     "id": 5,
     "demoLink": "",
-    "projectBgImg": "src/assets/imgs/vacations-api.png",
     "projectName": "Vacations API",
     "status": "GitHub Repo",
     "projectText": "Spring Boot backend for a travel booking system with transactional checkout workflows and relational domain modeling. Built with Java, Spring Data JPA, Hibernate, MySQL, and RESTful API design principles.",
