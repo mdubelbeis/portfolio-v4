@@ -1,0 +1,353 @@
+---
+const highlights = [
+  {
+    label: 'Focus',
+    value: 'Full-Stack TypeScript',
+  },
+  {
+    label: 'Core Stack',
+    value: 'React • Node.js • Express',
+  },
+  {
+    label: 'Background',
+    value: 'Java/Spring Boot + Enterprise IT',
+  },
+];
+
+const techStack = [
+  'TypeScript',
+  'React',
+  'Node.js',
+  'Express',
+  'MongoDB',
+  'SQL',
+  'Java',
+  'Spring Boot',
+  'Docker',
+];
+---
+
+<section class='about-section'>
+  <div class='about-blur about-blur-primary'></div>
+  <div class='about-blur about-blur-secondary'></div>
+
+  <div class='about-container'>
+    <div class='about-content'>
+      <p class='eyebrow'>Software Engineer</p>
+
+      <h1 class='about-title'>
+        I build full-stack applications with clean interfaces, reliable APIs,
+        and practical architecture.
+      </h1>
+
+      <p class='about-text about-text-large'>
+        I’m Mason Dubelbeis, a software engineer focused on full-stack
+        development with Typescript, React, Node.js, Express, APIs, databases,
+        and practical deployment-ready architecture. I also bring a strong
+        Java/Spring Boot foundation, which shaped the way I design secure APIs,
+        relational data models, and production-style backend systems.
+      </p>
+
+      <p class='about-text'>
+        My background in Navy leadership and enterprise IT shaped the way I
+        build: with ownership, structure, troubleshooting discipline, and a
+        focus on software that creates real operational value.
+      </p>
+
+      <div class='tech-list'>
+        {techStack.map((tech) => <span class='tech-pill'>{tech}</span>)}
+      </div>
+
+      <div class='about-actions'>
+        <a
+          href='/src/assets/resume/Mason-Dubelbeis-Software-Engineer-Resume.pdf'
+          rel='noopener moreferrer'
+          target='_blank'
+          class='btn btn-primary'
+          download
+        >
+          Download Resume
+        </a>
+
+        <a href='#projects' class='btn btn-secondary'> View Projects </a>
+      </div>
+    </div>
+
+    <div class='snapshot-card-wrapper'>
+      <div class='snapshot-card'>
+        <div class='snapshot-inner'>
+          <p class='snapshot-eyebrow'>Profile Snapshot</p>
+
+          <div class='highlight-list'>
+            {
+              highlights.map((item) => (
+                <div class='highlight-card'>
+                  <p class='highlight-label'>{item.label}</p>
+                  <p class='highlight-value'>{item.value}</p>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class='snapshot-note'>
+            <p>
+              Currently focused on backend and full-stack roles where I can
+              build APIs, troubleshoot systems, and deliver business-focused
+              software.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    color: #020617;
+    padding: 7rem 1.5rem;
+  }
+
+  .about-blur {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(64px);
+    pointer-events: none;
+  }
+
+  .about-blur-primary {
+    top: -7.5rem;
+    left: -7.5rem;
+    width: 20rem;
+    height: 20rem;
+    background: #dbeafe;
+  }
+
+  .about-blur-secondary {
+    right: -7.5rem;
+    bottom: -8.75rem;
+    width: 24rem;
+    height: 24rem;
+    background: #f1f5f9;
+  }
+
+  .about-container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+    max-width: 80rem;
+    margin-inline: auto;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    margin-bottom: 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .about-title {
+    max-width: 56rem;
+    color: #020617;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+
+  .about-text {
+    max-width: 42rem;
+    margin-top: 1.25rem;
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .about-text-large {
+    margin-top: 1.5rem;
+    color: #334155;
+    font-size: 1.125rem;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .tech-pill {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #f8fafc;
+    padding: 0.5rem 1rem;
+    color: #1e293b;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+  }
+
+  .about-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      border-color 200ms ease,
+      background-color 200ms ease,
+      color 200ms ease,
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    border: 1px solid #1d4ed8;
+    background: #1d4ed8;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(29, 78, 216, 0.2);
+  }
+
+  .btn-primary:hover {
+    background: #1e40af;
+    border-color: #1e40af;
+  }
+
+  .btn-secondary {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #1e293b;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+  }
+
+  .btn-secondary:hover {
+    border-color: #3b82f6;
+    color: #1d4ed8;
+  }
+
+  .snapshot-card-wrapper {
+    position: relative;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, #bfdbfe, #f1f5f9, #eff6ff);
+    padding: 1px;
+    box-shadow: 0 20px 35px rgba(15, 23, 42, 0.14);
+  }
+
+  .snapshot-card {
+    border-radius: 1.5rem;
+    background: #ffffff;
+    padding: 1.5rem;
+  }
+
+  .snapshot-inner {
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+  }
+
+  .snapshot-eyebrow {
+    color: #1d4ed8;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .highlight-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .highlight-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #ffffff;
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      background-color 300ms ease;
+  }
+
+  .highlight-card:hover {
+    transform: translateY(-0.25rem);
+    border-color: #bfdbfe;
+    background: rgba(239, 246, 255, 0.4);
+  }
+
+  .highlight-label {
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .highlight-value {
+    margin-top: 0.5rem;
+    color: #020617;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .snapshot-note {
+    margin-top: 1.5rem;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #eff6ff, #ffffff, #f8fafc);
+    padding: 1.25rem;
+  }
+
+  .snapshot-note p {
+    color: #334155;
+    font-size: 0.875rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 640px) {
+    .about-actions {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .about-section {
+      padding-inline: 3rem;
+    }
+
+    .about-container {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+</style>
