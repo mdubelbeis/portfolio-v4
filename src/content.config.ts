@@ -6,8 +6,9 @@ const projects = defineCollection({
   loader: file('src/content/projects.json'),
   schema: z.object({
     id: z.number(),
-    demoLink: z.string(),
-    projectName: z.string(),
+    demoLink: z.string().optional(),
+    projectName: z.string().optional(),
+    postmanLink: z.string(),
     status: z.string(),
     projectText: z.string(),
     projectTech: z.string().array(),
