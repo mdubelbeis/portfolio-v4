@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "demoLink": "",
+    "demoLink": "https://bug-board.onrender.com/api/v1/health",
     "projectName": "Bug-Board",
-    "status": "In Development",
+    "status": "API Deployed",
     "projectText": "Full-stack issue tracking application built with React, Node.js, Express, MongoDB, and TypeScript. Designed to practice production-style full-stack development with authentication, protected routes, project-based issue management, REST API design, validation, and database modeling.",
     "projectTech": [
       "React",

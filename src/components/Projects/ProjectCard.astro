@@ -10,6 +10,8 @@ const primaryGithubLink = githubLinks[0];
 const secondaryGithubLink = githubLinks[1];
 
 const hasMultipleGithubLinks = githubLinks.length > 1;
+
+const demoLabel = project.status === 'API Deployed' ? 'Live API' : 'Live Demo';
 ---
 
 <article class='project-card'>
@@ -65,7 +67,7 @@ const hasMultipleGithubLinks = githubLinks.length > 1;
             class='card-link card-link-primary'
           >
             <span aria-hidden='true'>↗</span>
-            Live Demo
+            {demoLabel}
           </a>
         )
       }
