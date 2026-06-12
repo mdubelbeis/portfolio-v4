@@ -3,7 +3,7 @@
     "id": 1,
     "demoLink": "https://bug-board.onrender.com/api/v1/health",
     "projectName": "Bug-Board",
-    "postmanLink": "https://documenter.getpostman.com/view/21197590/2sBXwsMq59",
+    "apiDocsLink": "https://documenter.getpostman.com/view/21197590/2sBXwsMq59",
     "status": "API Deployed",
     "projectText": "Full-stack issue tracking application built with React, Node.js, Express, MongoDB, and TypeScript. Designed to practice production-style full-stack development with authentication, protected routes, project-based issue management, REST API design, validation, and database modeling.",
     "projectTech": [
@@ -24,7 +24,7 @@
     "id": 2,
     "demoLink": "https://clienthub-frontend-sigma.vercel.app/login",
     "projectName": "ClientHub",
-    "postmanLink": "",
+    "apiDocsLink": "https://clienthub-api.onrender.com/swagger-ui/index.html",
     "status": "Deployed",
     "projectText": "Full-stack CRM application built with React, TypeScript, Spring Boot, JWT authentication, PostgreSQL, and role-based data access. Features client management, activity tracking, validation, secure REST APIs, API documentation, and production-style backend architecture.",
     "projectTech": [
@@ -46,7 +46,6 @@
     "id": 3,
     "demoLink": "",
     "projectName": "Dubex",
-    "postmanLink": "",
     "status": "In Development",
     "projectText": "Node.js and TypeScript CLI tool focused on developer productivity and code generation workflows. Built to practice command-line application design, file system operations, modular architecture, user prompts, and reusable utility patterns.",
     "projectTech": [
@@ -64,7 +63,6 @@
     "id": 4,
     "demoLink": "",
     "projectName": "Order Management API",
-    "postmanLink": "",
     "status": "GitHub Repo",
     "projectText": "Spring Boot backend API for managing customers, orders, order items, and product inventory. Focused on RESTful API design, relational data modeling, service-layer architecture, PostgreSQL persistence, and Docker-based development.",
     "projectTech": [
@@ -84,7 +82,6 @@
     "id": 5,
     "demoLink": "",
     "projectName": "Vacations API",
-    "postmanLink": "",
     "status": "GitHub Repo",
     "projectText": "Spring Boot backend for a travel booking system with transactional checkout workflows and relational domain modeling. Built with Java, Spring Data JPA, Hibernate, MySQL, and RESTful API design principles.",
     "projectTech": [

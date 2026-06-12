@@ -59,9 +59,9 @@ const demoLabel = project.status === 'API Deployed' ? 'Live API' : 'Live Demo';
 
     <div class='project-actions'>
       {
-        project.postmanLink && (
+        project.apiDocsLink && (
           <a
-            href={project.postmanLink}
+            href={project.apiDocsLink}
             target='_blank'
             rel='noopener noreferrer'
             class='card-link card-link-primary'
