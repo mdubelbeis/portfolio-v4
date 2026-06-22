@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "demoLink": "https://bug-board.onrender.com/api/v1/health",
+    "demoLink": "https://bug-board-gilt.vercel.app/",
     "projectName": "Bug-Board",
     "apiDocsLink": "https://documenter.getpostman.com/view/21197590/2sBXwsMq59",
-    "status": "API Deployed",
+    "status": "Deployed",
     "projectText": "Full-stack issue tracking application built with React, Node.js, Express, MongoDB, and TypeScript. Designed to practice production-style full-stack development with authentication, protected routes, project-based issue management, REST API design, validation, and database modeling.",
     "projectTech": [
       "React",

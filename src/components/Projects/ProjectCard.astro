@@ -59,19 +59,6 @@ const demoLabel = project.status === 'API Deployed' ? 'Live API' : 'Live Demo';
 
     <div class='project-actions'>
       {
-        project.apiDocsLink && (
-          <a
-            href={project.apiDocsLink}
-            target='_blank'
-            rel='noopener noreferrer'
-            class='card-link card-link-primary'
-          >
-            <span aria-hidden='true'>↗</span>
-            API Docs
-          </a>
-        )
-      }
-      {
         project.demoLink && (
           <a
             href={project.demoLink}
@@ -81,6 +68,19 @@ const demoLabel = project.status === 'API Deployed' ? 'Live API' : 'Live Demo';
           >
             <span aria-hidden='true'>↗</span>
             {demoLabel}
+          </a>
+        )
+      }
+      {
+        project.apiDocsLink && (
+          <a
+            href={project.apiDocsLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            class='card-link card-link-secondary'
+          >
+            <span aria-hidden='true'>↗</span>
+            API Docs
           </a>
         )
       }
